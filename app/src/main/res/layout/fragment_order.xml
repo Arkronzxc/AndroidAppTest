@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".order.OrderFragment">
+
+    <ImageView
+        android:id="@+id/frg_order__photo"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/image_height"
+        android:scaleType="centerCrop" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/car_info"
+        android:textStyle="bold"
+        android:theme="@style/TextStyle" />
+
+    <TextView
+        android:id="@+id/frg_order__car_model"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/car_model"
+        android:theme="@style/TextStyle"
+        tools:text="ghpfgpkh" />
+
+    <TextView
+        android:id="@+id/frg_order__reg_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/car_number"
+        android:theme="@style/TextStyle"
+
+        tools:text=";gfmhkgfh" />
+
+    <TextView
+        android:id="@+id/frg_order__driver_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/driver_name"
+        android:theme="@style/TextStyle"
+        tools:text="driver name" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="3dp"
+        android:background="@android:color/darker_gray" />
+
+    <TextView
+        android:id="@+id/frg_order__city"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/TextStyle"
+        tools:text="hgfh" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/card_height">
+
+        <TextView
+            android:id="@+id/frg_order__from"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/def_padding"
+            android:theme="@style/TextStyle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/circle"
+            app:layout_constraintTop_toTopOf="parent"
+
+            tools:text="hgfhgfhgfh" />
+
+        <TextView
+            android:id="@+id/frg_order__to"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/def_padding"
+            android:theme="@style/TextStyle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/frg_order__from"
+            app:layout_constraintTop_toBottomOf="@id/frg_order__from"
+            tools:text="jgfhogfhjif" />
+
+        <View
+            android:id="@+id/circle"
+            android:layout_width="5dp"
+            android:layout_height="5dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/circle"
+            android:theme="@style/TextStyle"
+            app:layout_constraintBottom_toBottomOf="@id/frg_order__from"
+            app:layout_constraintEnd_toStartOf="@id/frg_order__from"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/frg_order__from" />
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="1dp"
+            android:layout_height="0dp"
+            android:layout_margin="3dp"
+            android:background="@android:color/black"
+            android:theme="@style/TextStyle"
+            app:layout_constraintBottom_toTopOf="@id/triangle"
+            app:layout_constraintEnd_toEndOf="@id/circle"
+            app:layout_constraintStart_toStartOf="@id/circle"
+            app:layout_constraintTop_toBottomOf="@id/circle"
+
+            />
+
+        <View
+            android:id="@+id/triangle"
+            android:layout_width="5dp"
+            android:layout_height="5dp"
+            android:background="@drawable/triangle"
+            android:rotation="90"
+            app:layout_constraintBottom_toBottomOf="@id/frg_order__to"
+            app:layout_constraintEnd_toEndOf="@id/circle"
+            app:layout_constraintStart_toStartOf="@id/circle"
+            app:layout_constraintTop_toTopOf="@id/frg_order__to" />
+
+        <TextView
+            android:id="@+id/frg_order__date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/def_padding"
+            android:theme="@style/TextStyle"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="22.02.20" />
+
+        <TextView
+            android:id="@+id/frg_order__price"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/def_padding"
+            android:theme="@style/TextStyle"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="1000$" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/card_height">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/card_height"
+        android:layout_margin="@dimen/def_padding"
+        app:cardElevation="4dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/card_height">
+
+            <TextView
+                android:id="@+id/item_order__from"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/def_padding"
+                android:theme="@style/TextStyle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/circle"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="hgfhgfhgfh" />
+
+            <TextView
+                android:id="@+id/item_order__to"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/def_padding"
+                android:theme="@style/TextStyle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/item_order__from"
+                app:layout_constraintTop_toBottomOf="@id/item_order__from"
+                tools:text="jgfhogfhjif" />
+
+            <View
+                android:id="@+id/circle"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/circle"
+
+                app:layout_constraintBottom_toBottomOf="@id/item_order__from"
+                app:layout_constraintEnd_toStartOf="@id/item_order__from"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/item_order__from" />
+
+            <View
+                android:id="@+id/line"
+                android:layout_width="1dp"
+                android:layout_height="0dp"
+                android:layout_margin="3dp"
+                android:background="@android:color/black"
+                app:layout_constraintBottom_toTopOf="@id/triangle"
+                app:layout_constraintEnd_toEndOf="@id/circle"
+                app:layout_constraintStart_toStartOf="@id/circle"
+                app:layout_constraintTop_toBottomOf="@id/circle"
+
+                />
+
+            <View
+                android:id="@+id/triangle"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:background="@drawable/triangle"
+                android:rotation="90"
+                app:layout_constraintBottom_toBottomOf="@id/item_order__to"
+                app:layout_constraintEnd_toEndOf="@id/circle"
+                app:layout_constraintStart_toStartOf="@id/circle"
+                app:layout_constraintTop_toTopOf="@id/item_order__to" />
+
+            <TextView
+                android:id="@+id/item_order__date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/def_padding"
+                android:theme="@style/TextStyle"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:text="22.02.20" />
+
+            <TextView
+                android:id="@+id/item_order__price"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/def_padding"
+                android:theme="@style/TextStyle"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:text="1000$" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+</FrameLayout>
