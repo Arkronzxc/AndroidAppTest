@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun showOrder(order: Order) {
         FragmentUtils.changeFragment(
-            OrderFragment.newInstance(order),
+            OrderFragment.newInstance((order)),
             supportFragmentManager,
             R.id.main_container,
             TAG

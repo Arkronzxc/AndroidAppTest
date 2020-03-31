@@ -8,6 +8,7 @@ import com.example.testapp.model.Order
 import com.example.testapp.repository.OrderService
 
 class OrderViewModel : ViewModel() {
+
     private lateinit var ordersData: MutableLiveData<List<Order>>
 
     fun getOrdersData(): LiveData<List<Order>> {

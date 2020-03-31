@@ -137,10 +137,19 @@
             android:id="@+id/frg_order__price"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:padding="@dimen/def_padding"
+            android:theme="@style/TextStyle"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/frg_order__currency"
+            tools:text="1000"
+            tools:ignore="RtlSymmetry" />
+        <TextView
+            android:id="@+id/frg_order__currency"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
             android:theme="@style/TextStyle"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            tools:text="1000$" />
+            tools:text="$"
+            tools:ignore="RtlSymmetry" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </LinearLayout>
