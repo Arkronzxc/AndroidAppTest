@@ -90,17 +90,8 @@
                 android:padding="@dimen/def_padding"
                 android:theme="@style/TextStyle"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@id/item_order__currency"
-                tools:text="1000" />
-            <TextView
-                android:id="@+id/item_order__currency"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:padding="@dimen/def_padding"
-                android:theme="@style/TextStyle"
-                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                tools:text="$" />
+                tools:text="1000" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </com.google.android.material.card.MaterialCardView>

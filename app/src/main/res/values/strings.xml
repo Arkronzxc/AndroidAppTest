@@ -3,8 +3,8 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="car_info">Информация об автомобиле: </string>
-    <string name="driver_name">Имя водителя: </string>
-    <string name="car_number">Номер автомобиля:</string>
-    <string name="car_model">Марка автомобиля:</string>
+    <string name="car_info">Информация о поездке: </string>
+    <string name="driver_name">Имя водителя: %1$s </string>
+    <string name="car_number">Номер автомобиля: %1$s</string>
+    <string name="car_model">Марка автомобиля: %1$s</string>
 </resources>

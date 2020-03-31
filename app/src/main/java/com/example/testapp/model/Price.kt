@@ -4,6 +4,6 @@ import com.google.gson.annotations.SerializedName
 import java.util.*
 
 data class Price(
-    @SerializedName("amount") val amount: String,
+    @SerializedName("amount") val amount: Int,
     @SerializedName("currency") val currency: Currency
 )

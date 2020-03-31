@@ -8,6 +8,7 @@ import androidx.annotation.RequiresApi
 import androidx.recyclerview.widget.RecyclerView
 import com.example.testapp.R
 import com.example.testapp.model.Order
+import com.example.testapp.utils.CurrencyUtils
 import com.example.testapp.utils.DateUtils
 import kotlinx.android.synthetic.main.item_order.view.*
 
@@ -45,14 +46,15 @@ class OrderAdapter(val onOrderClickListener: (Order) -> Unit) :
 
     class OrderHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         private val dateUtils = DateUtils()
+        private val currencyUtils = CurrencyUtils()
 
         @RequiresApi(Build.VERSION_CODES.O)
         fun bind(order: Order) {
             itemView.item_order__from.text = order.startAddress.address
             itemView.item_order__to.text = order.endAddress.address
             itemView.item_order__date.text = dateUtils.dateParser(order.orderTime)
-            itemView.item_order__price.text =  order.price.amount
-            itemView.item_order__currency.text = order.price.currency.symbol
+            itemView.item_order__price.text =
+                currencyUtils.priceFormatter(order.price.amount, order.price.currency)
         }
     }
 }
